@@ -1,0 +1,148 @@
+.tablas {
+    color: rgb(10, 9, 9);
+    background-color: blanchedalmond;
+    justify-content: center;
+}
+.footer {
+    color:  rgb(244, 247, 244);
+    background-color: #01293a;
+    text-align: center;
+}
+.nosotros{
+    text-align: justify;
+    text-align: center;
+}
+.listasCentro{
+    list-style-position:inside;
+}
+.fondoFuente{
+    background-color: lightskyblue;
+    font-weight: bold;
+    text-align: center;
+}
+.fondoImagen{
+    width: 50%;
+    height: 100px;
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: 100px 100px ;
+}
+.imagen{
+    border-radius: 5px;
+    width: 200px;
+    border: solid 1px #01293a;
+}
+.imagenFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between  ;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2 , 2fr) ;
+    grid-template-rows: repeat(3 , 2fr) ;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+
+}
+.gridArea{
+    display: grid;
+    grid-template-areas: 
+    "inicio contacto contacto";
+}
+fieldset {
+    grid-area: contacto;
+}
+footer{
+    grid-area: fin;
+}
+header {
+    grid-area: inicio;
+}
+@media (min-width: 480px) and (max-width: 1024px) {
+    body {
+        font-size: 10px;
+        background-color: burlywood;
+    }
+    .fondoImagen{
+        width: 50%;
+        height: 100px;
+        background-repeat: repeat;
+        background-position: center center;
+        background-size: 100px 100px ;}
+    }
+@media (min-width: 1024px ){
+    .fondoImagen{
+        width: 50%;
+        height: 100px;
+        background-repeat: repeat;
+        background-position: center center;
+        background-size: 100px 100px ;
+}}
+@media (min-width: 320px ){
+    body{
+        font-size: 20px;
+        background-color: bisque;
+    }
+}
+.gradienteLineal {
+    background-image: linear-gradient(to right , #01293a, lightskyblue );
+    color:  rgb(244, 247, 244);
+    background-color: #01293a;
+    text-align: center;
+}
+.titu{
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+    color: rgb(244, 247, 244);
+    background-color: #01293a;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.transition{
+    transition: width 2s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+}
+.transition:hover {
+    width: 600px;
+}
+
+.animacion{
+    animation-name: animacion;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    border-radius: 5px;
+    width: 200px;
+    border: solid 1px #01293a;
+}
+
+@keyframes animacion {
+    0% {
+        border-radius: 50%;
+    }
+    30% {
+        border-radius: 50%;
+    }
+    100% {
+    }
+}
+$color:(
+    titu:#01293a,
+    grandiente:#01293a,
+    footer:#01293a
+);
+
+@each $nombre, $fondo in $color {
+    .btn-#{$nombre}{
+        background-color: $fondo;
+    }
+    
+}

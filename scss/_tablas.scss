@@ -1,0 +1,39 @@
+.titulosPagina {
+    color: rgb(234, 51, 5);
+    background-color: blanchedalmond;
+    margin:     50px;
+    font-style: normal;  
+}
+.subtitulos {
+    color: cornflowerblue;
+}
+.listas {
+    color: rgb(14, 0, 0);
+    text-align: center;
+    text-align: justify;
+    list-style-type: circle;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #01293a;
+}
+.menu a{
+    text-decoration: none;
+    margin-left: 50px;
+    background-color: #e0e4e6;
+    text-align: center;
+    border: solid 5px #01293a;
+}
+
+@each $lista in  a li, menu a {
+    #{$lista} {
+        width: 100px;
+        height: 100px;
+    }
+}
+    
